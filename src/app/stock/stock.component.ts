@@ -43,7 +43,7 @@ export class StockComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  buy(p: Product) {
+  buy(p: Product): void {
     p.stockQuantity--;
   }
 }
