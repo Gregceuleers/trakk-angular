@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { HelloWorldComponent } from './hello-world/hello-world.component';
 import {FormsModule} from '@angular/forms';
 import {StockModule} from './stock/stock.module';
+import { HighLightDirective } from './directives/high-light.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HelloWorldComponent
+    HelloWorldComponent,
+    HighLightDirective
   ],
   imports: [
     BrowserModule,
