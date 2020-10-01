@@ -6,11 +6,15 @@ import { AppComponent } from './app.component';
 import { HelloWorldComponent } from './hello-world/hello-world.component';
 import {FormsModule} from '@angular/forms';
 import {StockModule} from './stock/stock.module';
+import { HomeComponent } from './home/home.component';
+import { Page404Component } from './page404/page404.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HelloWorldComponent,
+    HomeComponent,
+    Page404Component,
   ],
   imports: [
     BrowserModule,
