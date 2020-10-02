@@ -73,6 +73,7 @@ export class ShoppingComponent implements OnInit {
 
   removeProd(p: ProductShopping): void {
     this.basketList.splice(this.basketList.indexOf(p), 1);
+    localStorage.setItem('basketlist', JSON.stringify(this.basketList));
     this.productList.find(pr => pr.id === p.id).stockQuantity++;
     this.totalBasket -= p.price;
   }

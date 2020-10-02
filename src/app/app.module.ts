@@ -10,6 +10,8 @@ import { HomeComponent } from './home/home.component';
 import { Page404Component } from './page404/page404.component';
 import { StorageDemoComponent } from './storage-demo/storage-demo.component';
 import {ShoppingModule} from './shopping/shopping.module';
+import { CommunicationComponent } from './communication/communication.component';
+import { ChildComponent } from './communication/child/child.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,8 @@ import {ShoppingModule} from './shopping/shopping.module';
     HomeComponent,
     Page404Component,
     StorageDemoComponent,
+    CommunicationComponent,
+    ChildComponent,
   ],
   imports: [
     BrowserModule,

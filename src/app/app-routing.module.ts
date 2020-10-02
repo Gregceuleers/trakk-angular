@@ -7,6 +7,7 @@ import {StockComponent} from './stock/stock.component';
 import {DetailStockComponent} from './stock/detail-stock/detail-stock.component';
 import {StorageDemoComponent} from './storage-demo/storage-demo.component';
 import {ShoppingComponent} from './shopping/shopping.component';
+import {CommunicationComponent} from './communication/communication.component';
 
 
 const routes: Route[] = [
@@ -43,6 +44,10 @@ const routes: Route[] = [
   {
     path: 'shopping',
     component: ShoppingComponent
+  },
+  {
+    path: 'communication',
+    component: CommunicationComponent
   },
   {
     path: '**',
