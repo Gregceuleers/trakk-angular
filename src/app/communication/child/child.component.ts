@@ -1,4 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {SondageService} from '../sondage.service';
 
 @Component({
   selector: 'app-child',
@@ -13,7 +14,9 @@ export class ChildComponent implements OnInit {
 
   @Output() contre: EventEmitter<number> = new EventEmitter<number>();
 
-  constructor() {
+  constructor(
+    public service: SondageService
+  ) {
   }
 
   ngOnInit(): void {

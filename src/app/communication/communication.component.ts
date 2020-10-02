@@ -1,4 +1,6 @@
 import {Component, OnInit} from '@angular/core';
+import {test} from '../shopping/shopping.component';
+import {SondageService} from './sondage.service';
 
 @Component({
   selector: 'app-communication',
@@ -12,7 +14,9 @@ export class CommunicationComponent implements OnInit {
   pour = 0;
   contre = 0;
 
-  constructor() {
+  constructor(
+    public service: SondageService
+  ) {
   }
 
   ngOnInit(): void {
@@ -20,6 +24,7 @@ export class CommunicationComponent implements OnInit {
 
   ajouterPour($event: number) {
     this.pour += $event;
+    console.log(test);
   }
 
   ajouterContre($event: number) {

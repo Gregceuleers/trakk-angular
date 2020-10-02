@@ -112,3 +112,5 @@ export interface ProductShopping {
   price: number;
   stockQuantity: number;
 }
+
+export const test = 'Bonjour';
