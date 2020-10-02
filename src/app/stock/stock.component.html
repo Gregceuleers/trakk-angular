@@ -11,7 +11,7 @@
   <tbody>
   <tr *ngFor="let p of stock" >
     <ng-container *ngIf="p.stockQuantity > 0">
-      <td>{{p.title}}</td>
+      <td><a routerLink="/stock/{{p.id}}">{{p.title}}</a></td>
       <td>{{p.description}}</td>
       <td [ngClass]="{cheap: p.price < 5}">{{p.price}} €</td>
       <td>{{p.stockQuantity}}</td>
@@ -23,3 +23,4 @@
   </tr>
   </tbody>
 </table>
+<router-outlet></router-outlet>

@@ -8,6 +8,7 @@ import {Component, OnInit} from '@angular/core';
 export class StockComponent implements OnInit {
 
   stock: Product[] = [{
+    id: 1,
     title: 'Ecran',
     description: 'Ecran plat de 24',
     price: 199.95,
@@ -15,6 +16,7 @@ export class StockComponent implements OnInit {
     creationDate: '2020-07-12'
   },
     {
+      id: 2,
       title: 'Souris',
       description: 'Souris gaming',
       price: 85.95,
@@ -22,6 +24,7 @@ export class StockComponent implements OnInit {
       creationDate: '2020-09-25'
     },
     {
+      id: 3,
       title: 'Clavier',
       description: 'clavier mécanique de mer...',
       price: 4.25,
@@ -29,6 +32,7 @@ export class StockComponent implements OnInit {
       creationDate: '2020-10-01'
     },
     {
+      id: 4,
       title: 'Laptop DELL',
       description: 'Pc portable DELL haute performance',
       price: 965.40,
@@ -49,6 +53,7 @@ export class StockComponent implements OnInit {
 }
 
 export interface Product {
+  id: number;
   title: string;
   description: string;
   price: number;
