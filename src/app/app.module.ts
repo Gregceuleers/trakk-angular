@@ -9,6 +9,7 @@ import {StockModule} from './stock/stock.module';
 import { HomeComponent } from './home/home.component';
 import { Page404Component } from './page404/page404.component';
 import { StorageDemoComponent } from './storage-demo/storage-demo.component';
+import {ShoppingModule} from './shopping/shopping.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { StorageDemoComponent } from './storage-demo/storage-demo.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    StockModule
+    StockModule,
+    ShoppingModule
   ],
   providers: [],
   exports: [
