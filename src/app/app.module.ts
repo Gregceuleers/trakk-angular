@@ -8,6 +8,7 @@ import {FormsModule} from '@angular/forms';
 import {StockModule} from './stock/stock.module';
 import { HomeComponent } from './home/home.component';
 import { Page404Component } from './page404/page404.component';
+import { StorageDemoComponent } from './storage-demo/storage-demo.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { Page404Component } from './page404/page404.component';
     HelloWorldComponent,
     HomeComponent,
     Page404Component,
+    StorageDemoComponent,
   ],
   imports: [
     BrowserModule,
