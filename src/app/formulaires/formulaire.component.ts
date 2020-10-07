@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-formulaire',
@@ -13,7 +14,11 @@ export class FormulaireComponent implements OnInit {
     genre: Genre
   };
 
-  constructor() {
+  reactForm: FormGroup;
+
+  constructor(
+    private builder: FormBuilder
+  ) {
   }
 
   ngOnInit(): void {
@@ -22,14 +27,23 @@ export class FormulaireComponent implements OnInit {
       email: '',
       genre: Genre.M
     };
+    this.reactForm = this.builder.group({
+      name: ['', [Validators.required]],
+      email: ['', [Validators.required, Validators.email]],
+      genre: [Genre.F]
+    });
   }
 
-  submit() {
+  submit(): void {
     console.log(this.objForm);
   }
 
   getEnumValues(): string[] {
     return ['Male', 'Female', 'Noop'];
+  }
+
+  submitReactive(): void {
+    console.log(this.reactForm.value);
   }
 }
 
