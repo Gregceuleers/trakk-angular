@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-formulaire',
@@ -7,9 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormulaireComponent implements OnInit {
 
-  constructor() { }
+  objForm: {
+    name: string,
+    email: string
+  };
 
-  ngOnInit(): void {
+  constructor() {
   }
 
+  ngOnInit(): void {
+    this.objForm = {
+      name: '',
+      email: ''
+    };
+  }
+
+  submit() {
+    console.log(this.objForm);
+  }
 }
