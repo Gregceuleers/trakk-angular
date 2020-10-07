@@ -28,7 +28,13 @@ export class FormulaireComponent implements OnInit {
       genre: Genre.M
     };
     this.reactForm = this.builder.group({
-      name: ['', [Validators.required]],
+      name: ['', [
+        Validators.required,
+        Validators.pattern(/^([^0-9]*)$/),
+        Validators.minLength(2),
+        Validators.maxLength(20)
+        ]
+      ],
       email: ['', [Validators.required, Validators.email]],
       genre: [Genre.F]
     });
