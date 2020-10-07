@@ -46,10 +46,22 @@
       </label>
       <label for="genreR"> Genre :
         <select id="genreR" formControlName="genre">
-          <option value=""></option>
+          <option [value]="''"></option>
           <option *ngFor="let g of getEnumValues()" [value]="g">{{g}}</option>
         </select>
+        <div class="val-error" *ngIf="reactForm.invalid && (reactForm.get('genre').touched || reactForm.get('genre').dirty)">
+          <p *ngIf="reactForm.get('genre').hasError('noEmptyValue')">The genre must not be empty!</p>
+        </div>
       </label>
+      <label for="pwd"> Pwd :
+        <input type="password" id="pwd" formControlName="pwd">
+      </label>
+      <label for="confirm"> Confirm :
+        <input type="password" id="confirm" formControlName="confirm">
+      </label>
+      <div class="val-error" *ngIf="reactForm.invalid">
+        <p *ngIf="reactForm.hasError('pwdConfirm')">The pwd doesn't match with confirm !</p>
+      </div>
       <button type="submit" [disabled]="!reactForm.valid">SOUMETTRE</button>
     </form>
     {{reactForm.value | json}}
