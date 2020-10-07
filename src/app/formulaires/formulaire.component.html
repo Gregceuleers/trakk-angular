@@ -5,10 +5,15 @@
   <label for="name"> Name :
 <!--    TODO la liaison de l'input se fait via le TWO-WAY Binding [(ngModel)] -->
 <!--    TODO l'attribut name de l'input vers un objet qui reprend les données du formulaire-->
-    <input type="text" id="name" [(ngModel)]="objForm.name" name="name">
+    <input type="text" id="name" [(ngModel)]="objForm.name" name="name" required>
   </label>
   <label for="email"> Email :
-    <input type="email" id="email" [(ngModel)]="objForm.email" name="email">
+    <input type="email" id="email" [(ngModel)]="objForm.email" name="email" required>
+  </label>
+  <label for="genre"> Genre :
+    <select id="genre" [(ngModel)]="objForm.genre" name="genre">
+      <option *ngFor="let g of getEnumValues()">{{g}}</option>
+    </select>
   </label>
 <!--  TODO le bouton type submit va lancer l'appel à la méthode du (ngSubmit)-->
   <button type="submit">SOUMETTRE</button>

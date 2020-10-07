@@ -9,7 +9,8 @@ export class FormulaireComponent implements OnInit {
 
   objForm: {
     name: string,
-    email: string
+    email: string,
+    genre: Genre
   };
 
   constructor() {
@@ -18,11 +19,22 @@ export class FormulaireComponent implements OnInit {
   ngOnInit(): void {
     this.objForm = {
       name: '',
-      email: ''
+      email: '',
+      genre: Genre.M
     };
   }
 
   submit() {
     console.log(this.objForm);
   }
+
+  getEnumValues(): string[] {
+    return ['Male', 'Female', 'Noop'];
+  }
+}
+
+export enum Genre {
+  M = 'Male',
+  F = 'Female',
+  X = 'Noop'
 }
