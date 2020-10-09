@@ -15,7 +15,8 @@ import { ChildComponent } from './communication/child/child.component';
 import {FormulairesModule} from './formulaires/formulaires.module';
 import { ObservableDemoComponent } from './observable-demo/observable-demo.component';
 import { WebApiConsumeComponent } from './web-api-consume/web-api-consume.component';
-import {HttpClientModule} from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
+import {MovieDBInterceptor} from './web-api-consume/movie-db.interceptor';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,13 @@ import {HttpClientModule} from '@angular/common/http';
     ShoppingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: MovieDBInterceptor,
+      multi: true
+    }
+  ],
   exports: [
   ],
   bootstrap: [AppComponent]

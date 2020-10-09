@@ -1,2 +1,4 @@
 <h3>Movies DB Wep Api</h3>
-{{movies | json}}
+<div class="poster-container" *ngIf="movies">
+  <img *ngFor="let movie of movies.results" src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" alt="" width="100px">
+</div>

@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {MovieDBService} from './movie-db.service';
+import {MovieDBService, PageDiscover} from './movie-db.service';
 
 @Component({
   selector: 'app-web-api-consume',
@@ -8,7 +8,7 @@ import {MovieDBService} from './movie-db.service';
 })
 export class WebApiConsumeComponent implements OnInit {
 
-  movies: any;
+  movies: PageDiscover;
 
   constructor(
     private movieDBService: MovieDBService
