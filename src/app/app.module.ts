@@ -15,6 +15,7 @@ import { ChildComponent } from './communication/child/child.component';
 import {FormulairesModule} from './formulaires/formulaires.module';
 import { ObservableDemoComponent } from './observable-demo/observable-demo.component';
 import { WebApiConsumeComponent } from './web-api-consume/web-api-consume.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { WebApiConsumeComponent } from './web-api-consume/web-api-consume.compon
     FormulairesModule,
     FormsModule,
     StockModule,
-    ShoppingModule
+    ShoppingModule,
+    HttpClientModule
   ],
   providers: [],
   exports: [

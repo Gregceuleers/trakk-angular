@@ -10,6 +10,7 @@ import {ShoppingComponent} from './shopping/shopping.component';
 import {CommunicationComponent} from './communication/communication.component';
 import {FormulaireComponent} from './formulaires/formulaire.component';
 import {ObservableDemoComponent} from './observable-demo/observable-demo.component';
+import {WebApiConsumeComponent} from './web-api-consume/web-api-consume.component';
 
 
 const routes: Route[] = [
@@ -58,6 +59,10 @@ const routes: Route[] = [
   {
     path: 'observable',
     component: ObservableDemoComponent
+  },
+  {
+    path: 'webapi',
+    component: WebApiConsumeComponent
   },
   {
     path: '**',
