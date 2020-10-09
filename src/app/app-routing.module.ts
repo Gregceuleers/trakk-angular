@@ -9,6 +9,7 @@ import {StorageDemoComponent} from './storage-demo/storage-demo.component';
 import {ShoppingComponent} from './shopping/shopping.component';
 import {CommunicationComponent} from './communication/communication.component';
 import {FormulaireComponent} from './formulaires/formulaire.component';
+import {ObservableDemoComponent} from './observable-demo/observable-demo.component';
 
 
 const routes: Route[] = [
@@ -53,6 +54,10 @@ const routes: Route[] = [
   {
     path: 'formulaire',
     component: FormulaireComponent
+  },
+  {
+    path: 'observable',
+    component: ObservableDemoComponent
   },
   {
     path: '**',

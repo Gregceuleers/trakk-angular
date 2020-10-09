@@ -13,6 +13,8 @@ import {ShoppingModule} from './shopping/shopping.module';
 import { CommunicationComponent } from './communication/communication.component';
 import { ChildComponent } from './communication/child/child.component';
 import {FormulairesModule} from './formulaires/formulaires.module';
+import { ObservableDemoComponent } from './observable-demo/observable-demo.component';
+import { WebApiConsumeComponent } from './web-api-consume/web-api-consume.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import {FormulairesModule} from './formulaires/formulaires.module';
     StorageDemoComponent,
     CommunicationComponent,
     ChildComponent,
+    ObservableDemoComponent,
+    WebApiConsumeComponent,
   ],
   imports: [
     BrowserModule,
