@@ -13,6 +13,8 @@ import {ObservableDemoComponent} from './observable-demo/observable-demo.compone
 import {WebApiConsumeComponent} from './web-api-consume/web-api-consume.component';
 import {GolfConsumerComponent} from './web-api-consume/golf-consumer/golf-consumer.component';
 import {AuthGuard} from './web-api-consume/golf-consumer/auth.guard';
+import {LoginComponent} from './web-api-consume/login/login.component';
+import {RedirectMessageComponent} from './web-api-consume/redirect-message/redirect-message.component';
 
 
 const routes: Route[] = [
@@ -70,6 +72,10 @@ const routes: Route[] = [
     path: 'golf',
     component: GolfConsumerComponent,
     canActivate: [AuthGuard]
+  },
+  {
+    path: 'redirect-message',
+    component: RedirectMessageComponent
   },
   {
     path: '**',

@@ -18,6 +18,8 @@ import { WebApiConsumeComponent } from './web-api-consume/web-api-consume.compon
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {MovieDBInterceptor} from './web-api-consume/movie-db.interceptor';
 import { GolfConsumerComponent } from './web-api-consume/golf-consumer/golf-consumer.component';
+import { LoginComponent } from './web-api-consume/login/login.component';
+import { RedirectMessageComponent } from './web-api-consume/redirect-message/redirect-message.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,8 @@ import { GolfConsumerComponent } from './web-api-consume/golf-consumer/golf-cons
     ObservableDemoComponent,
     WebApiConsumeComponent,
     GolfConsumerComponent,
+    LoginComponent,
+    RedirectMessageComponent,
   ],
   imports: [
     BrowserModule,

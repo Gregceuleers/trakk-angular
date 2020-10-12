@@ -1,0 +1,3 @@
+<button (click)="login()" *ngIf="!authService.isLogged">Log In</button>
+<button (click)="logout()" *ngIf="authService.isLogged">Log out</button>
+{{msg}}
