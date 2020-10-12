@@ -19,9 +19,12 @@ export class MovieDBInterceptor implements HttpInterceptor {
 
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
 
-    request = request.clone({
-      url: request.url + '?api_key=' + this.movieDBService.API_KEY,
-    });
+    if (request.url.startsWith(this.movieDBService.BASE_URL)) {
+      request = request.clone({
+        url: request.url + '?api_key=' + this.movieDBService.API_KEY,
+      });
+    }
+
     return next.handle(request);
   }
 }
