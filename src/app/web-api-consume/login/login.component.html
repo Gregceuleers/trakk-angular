@@ -1,3 +1,13 @@
-<button (click)="login()" *ngIf="!authService.isLogged">Log In</button>
+<form *ngIf="!authService.isLogged" (ngSubmit)="login()" [formGroup]="form">
+  <label for="pseudo">
+    Pseudo : <input type="text" id="pseudo" formControlName="username">
+  </label>
+  <label for="pwd">
+    Password : <input type="password" id="pwd" formControlName="password">
+  </label>
+  <button type="submit">Log In</button>
+<!--  {{form.value | json}}-->
+</form>
+
 <button (click)="logout()" *ngIf="authService.isLogged">Log out</button>
 {{msg}}

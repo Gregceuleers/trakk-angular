@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HelloWorldComponent } from './hello-world/hello-world.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {StockModule} from './stock/stock.module';
 import { HomeComponent } from './home/home.component';
 import { Page404Component } from './page404/page404.component';
@@ -43,7 +43,8 @@ import { RedirectMessageComponent } from './web-api-consume/redirect-message/red
     FormsModule,
     StockModule,
     ShoppingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [
     {
