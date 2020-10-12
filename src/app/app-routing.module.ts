@@ -12,6 +12,7 @@ import {FormulaireComponent} from './formulaires/formulaire.component';
 import {ObservableDemoComponent} from './observable-demo/observable-demo.component';
 import {WebApiConsumeComponent} from './web-api-consume/web-api-consume.component';
 import {GolfConsumerComponent} from './web-api-consume/golf-consumer/golf-consumer.component';
+import {AuthGuard} from './web-api-consume/golf-consumer/auth.guard';
 
 
 const routes: Route[] = [
@@ -67,7 +68,8 @@ const routes: Route[] = [
   },
   {
     path: 'golf',
-    component: GolfConsumerComponent
+    component: GolfConsumerComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: '**',
@@ -79,4 +81,5 @@ const routes: Route[] = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}
