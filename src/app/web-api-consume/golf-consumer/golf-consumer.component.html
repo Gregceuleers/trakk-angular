@@ -1,1 +1,11 @@
-<p>golf-consumer works!</p>
+<p>Mes parcours</p>
+<div class="parcours-container">
+  <div *ngFor="let p of parcours$ | async">
+    {{p.nom}}
+    <ul>
+      <li *ngFor="let t of p.trous">
+        {{t.typeTrou}} - {{t.distance}}
+      </li>
+    </ul>
+  </div>
+</div>

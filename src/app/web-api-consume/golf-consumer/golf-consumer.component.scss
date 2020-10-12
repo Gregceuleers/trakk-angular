@@ -1,0 +1,9 @@
+.parcours-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  border: 1px solid darkgreen;
+  padding: 0.7em;
+  flex-wrap: wrap;
+}

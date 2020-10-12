@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import {GolfConsumerService} from './golf-consumer.service';
+import {Component, OnInit} from '@angular/core';
+import {GolfConsumerService, Parcours} from './golf-consumer.service';
+import {Observable} from 'rxjs';
 
 @Component({
   selector: 'app-golf-consumer',
@@ -8,12 +9,15 @@ import {GolfConsumerService} from './golf-consumer.service';
 })
 export class GolfConsumerComponent implements OnInit {
 
+  parcours$: Observable<Parcours[]>;
+
   constructor(
     private service: GolfConsumerService
-  ) { }
+  ) {
+  }
 
   ngOnInit(): void {
-    this.service.getAllParcours().subscribe(result => console.log(result));
+    this.parcours$ = this.service.getAllParcours();
   }
 
 }
