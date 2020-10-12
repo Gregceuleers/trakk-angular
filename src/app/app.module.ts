@@ -17,6 +17,7 @@ import { ObservableDemoComponent } from './observable-demo/observable-demo.compo
 import { WebApiConsumeComponent } from './web-api-consume/web-api-consume.component';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {MovieDBInterceptor} from './web-api-consume/movie-db.interceptor';
+import { GolfConsumerComponent } from './web-api-consume/golf-consumer/golf-consumer.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import {MovieDBInterceptor} from './web-api-consume/movie-db.interceptor';
     ChildComponent,
     ObservableDemoComponent,
     WebApiConsumeComponent,
+    GolfConsumerComponent,
   ],
   imports: [
     BrowserModule,
