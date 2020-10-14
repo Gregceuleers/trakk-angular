@@ -29,6 +29,7 @@ export class AuthGuard implements CanActivate {
     this.authService.redirectUrl = url;
 
     if (this.authService.isLogged) {
+      console.log('je passe ici');
       return true;
     }
 
