@@ -11,7 +11,7 @@ export class AuthService {
 
   BASE_BACK_URL = 'http://localhost:8081/';
 
-  redirectUrl: string;
+  redirectUrl = '/home';
 
   isLogged: boolean;
 
@@ -25,12 +25,13 @@ export class AuthService {
    * Méthode de login
    * @return Observable<boolean>
    */
-  login(formValue: { username: string; password: string }): Observable<boolean> {
+  login(formValue: { username: string; password: string }): Observable<any> {
 
-    this.httpClient.post<{ username: string; password: string }>(this.BASE_BACK_URL + 'users/auth', formValue)
-      .subscribe(value => console.log(value));
 
-    return of(true);
+    return this.httpClient.post<{ username: string; password: string }>(this.BASE_BACK_URL + 'users/auth', formValue);
+
+
+
     // MOCK design
     // return of(true).pipe(
     //   delay(1000),
@@ -40,6 +41,9 @@ export class AuthService {
 
   logout(): void {
     this.isLogged = false;
+    sessionStorage.removeItem('credentials');
+    this.redirectUrl = '/home';
     this.router.navigate(['home']).then();
+
   }
 }

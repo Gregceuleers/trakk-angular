@@ -15,9 +15,10 @@ export class GolfConsumerService {
   }
 
   getAllParcours(): Observable<Parcours[]> {
+
     return this.httpClient.get<Parcours[]>(this.API_BASE_URL + 'parcours', {
       headers: {
-        Authorization: 'Basic ' + btoa('greg:1234')
+        Authorization: 'Basic ' + btoa(sessionStorage.getItem('credentials'))
       }
     });
   }
@@ -32,6 +33,7 @@ export interface Parcours {
   dateModification: Date;
   trous: Trou[] | null;
 }
+
 export interface Trou {
   id: number;
   typeTrou: string;
