@@ -33,8 +33,10 @@ export class LoginComponent implements OnInit {
     if (this.form.valid) {
       this.authService.login(this.form.value as { username: string, password: string }).subscribe(result => {
         this.msg = 'Connection réussie !';
+        console.log(result);
         if (result.username && result.password) {
           this.authService.isLogged = true;
+          this.authService.connectedUser = result;
           sessionStorage.setItem('credentials', result.username + ':' + this.form.value.password);
           this.router.navigate([this.authService.redirectUrl]).then();
         }

@@ -1,7 +1,7 @@
 <p>Mes parcours</p>
 <div class="parcours-container">
   <div *ngFor="let p of parcours$ | async">
-    {{p.nom}}
+    {{p.nom}} <button *ngIf="authService.connectedUser.roles.includes('ADMIN')">ADMIN ONLY</button>
     <ul>
       <li *ngFor="let t of p.trous">
         {{t.typeTrou}} - {{t.distance}}

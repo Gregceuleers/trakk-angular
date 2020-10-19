@@ -20,6 +20,7 @@ import {MovieDBInterceptor} from './web-api-consume/movie-db.interceptor';
 import { GolfConsumerComponent } from './web-api-consume/golf-consumer/golf-consumer.component';
 import { LoginComponent } from './web-api-consume/login/login.component';
 import { RedirectMessageComponent } from './web-api-consume/redirect-message/redirect-message.component';
+import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { RedirectMessageComponent } from './web-api-consume/redirect-message/red
     GolfConsumerComponent,
     LoginComponent,
     RedirectMessageComponent,
+    AdminComponent,
   ],
   imports: [
     BrowserModule,

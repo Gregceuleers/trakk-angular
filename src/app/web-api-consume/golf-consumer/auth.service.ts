@@ -15,6 +15,8 @@ export class AuthService {
 
   isLogged: boolean;
 
+  connectedUser: any;
+
   constructor(
     public router: Router,
     public httpClient: HttpClient

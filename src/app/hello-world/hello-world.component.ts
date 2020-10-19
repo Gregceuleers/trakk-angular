@@ -1,4 +1,6 @@
 import {Component, OnInit} from '@angular/core';
+import {AuthService} from '../web-api-consume/golf-consumer/auth.service';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-hello-world',
@@ -15,10 +17,14 @@ export class HelloWorldComponent implements OnInit {
 
   incrementation = 0;
 
-  constructor() {
+  constructor(
+    public authService: AuthService,
+    public activatedRoute: ActivatedRoute
+  ) {
   }
 
   ngOnInit(): void {
+    this.activatedRoute.url.subscribe(urlSegment => this.authService.redirectUrl = urlSegment[0].path);
   }
 
   affichage(): string {

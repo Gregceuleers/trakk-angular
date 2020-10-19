@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {GolfConsumerService, Parcours} from './golf-consumer.service';
 import {Observable} from 'rxjs';
+import {AuthService} from './auth.service';
 
 @Component({
   selector: 'app-golf-consumer',
@@ -12,7 +13,8 @@ export class GolfConsumerComponent implements OnInit {
   parcours$: Observable<Parcours[]>;
 
   constructor(
-    private service: GolfConsumerService
+    private service: GolfConsumerService,
+    public authService: AuthService
   ) {
   }
 

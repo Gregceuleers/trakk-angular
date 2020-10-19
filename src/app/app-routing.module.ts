@@ -15,6 +15,7 @@ import {GolfConsumerComponent} from './web-api-consume/golf-consumer/golf-consum
 import {AuthGuard} from './web-api-consume/golf-consumer/auth.guard';
 import {LoginComponent} from './web-api-consume/login/login.component';
 import {RedirectMessageComponent} from './web-api-consume/redirect-message/redirect-message.component';
+import {AdminComponent} from './admin/admin.component';
 
 
 const routes: Route[] = [
@@ -76,6 +77,14 @@ const routes: Route[] = [
   {
     path: 'redirect-message',
     component: RedirectMessageComponent
+  },
+  {
+    path: 'admin',
+    component: AdminComponent,
+    canActivate: [AuthGuard],
+    data: {
+      expected: 'ADMIN'
+    }
   },
   {
     path: '**',
